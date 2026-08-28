@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  --webroot-green: #3E924F;
+  --webroot-green-dark: #31753F;
+  --webroot-green-light: #5CB870;
+  --webroot-green-bg: #EBF6EE;
+}
+
+@layer base {
+  body {
+    background-color: #FAFAFC;
+    color: #0F172A;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Focus States - #3E924F */
+*:focus-visible {
+  outline: 2px solid #3E924F;
+  outline-offset: 2px;
+}
+
+/* Infinite Marquee Ticker Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
