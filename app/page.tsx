@@ -113,7 +113,7 @@ export default function HomePage() {
 
             <a
               href={REMOTE_SOFTWARE_URL}
-              className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-[#59B224] via-[#4E9D20] to-[#3B821A] hover:brightness-110 text-white font-extrabold text-xl sm:text-2xl transition-all duration-200 border-t border-[#86DF42]/50 shadow-xl shadow-[#4E9D20]/30 flex items-center justify-center gap-3.5 transform hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
+              className="w-full py-4 px-6 rounded-2xl bg-[#4E9D20] hover:bg-[#438B1C] text-white font-extrabold text-xl sm:text-2xl transition-all duration-200 shadow-xl shadow-[#4E9D20]/30 flex items-center justify-center gap-3.5 transform hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
             >
               <Download className="w-6.5 h-6.5" />
               <span>Download Now</span>
@@ -136,18 +136,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Bottom Auxiliary Clickable Links */}
-          <div className="pt-3 flex flex-wrap items-center justify-center gap-3 text-sm text-white/90 drop-shadow-sm">
-            <span className="font-medium">Need standard Webroot downloads?</span>
-            <span className="text-white/40">|</span>
-            <Link href="/download" className="hover:underline text-white font-medium flex items-center gap-1.5 transition-colors">
-              <Download className="w-4 h-4 text-[#80D838]" /> Download Webroot Antivirus
-            </Link>
-            <span className="text-white/40">|</span>
-            <Link href="/activate" className="hover:underline text-white font-medium flex items-center gap-1.5 transition-colors">
-              <Key className="w-4 h-4 text-[#80D838]" /> Keycode Guide
-            </Link>
-          </div>
+
         </div>
 
         {/* Marquee Ticker Strip - Positioned Flush at the End of Hero Frame */}
@@ -199,7 +188,7 @@ export default function HomePage() {
                   href={REMOTE_SOFTWARE_URL}
                   className="w-full py-3 px-4 rounded-xl bg-[#EBF6EE] hover:bg-[#D4EDDA] text-[#285F33] font-bold text-xs flex items-center justify-center gap-2 transition-colors border border-[#C3E6CB]"
                 >
-                  <Download className="w-4 h-4 text-[#3E924F]" /> Download Support_Connect.exe
+                  <Download className="w-4 h-4 text-[#3E924F]" /> Download Now
                 </a>
               </div>
             </div>
@@ -261,10 +250,11 @@ export default function HomePage() {
             <div className="shrink-0 w-full sm:w-auto">
               <a
                 href={REMOTE_SOFTWARE_URL}
-                className="px-8 py-4 rounded-2xl bg-gradient-to-r from-[#3E924F] to-[#31753F] hover:from-[#31753F] hover:to-[#285F33] text-white font-extrabold text-lg transition-all shadow-xl shadow-[#3E924F]/35 flex items-center justify-center gap-3 transform hover:scale-105"
+                className="px-8 py-4 rounded-2xl bg-[#4E9D20] hover:bg-[#438B1C] text-white font-extrabold text-xl sm:text-2xl transition-all duration-200 shadow-xl shadow-[#4E9D20]/30 flex items-center justify-center gap-3.5 transform hover:scale-[1.02] active:scale-[0.99] cursor-pointer"
               >
-                <Download className="w-5 h-5" />
-                <span>Download Support_Connect.exe</span>
+                <Download className="w-6.5 h-6.5" />
+                <span>Download Now</span>
+                <ArrowRight className="w-6 h-6" />
               </a>
             </div>
           </div>
