@@ -78,64 +78,149 @@ export default function HomePage() {
 
   return (
     <div className="pb-16">
-      {/* 1. HERO SECTION - PRISTINE TEXT-FREE BACKGROUND IMAGE & FLUSH BOTTOM MARQUEE */}
-      <section className="relative w-full text-white overflow-hidden border-b border-[#36751A] bg-[#4D9825] bg-[url('/images/hero-clean-bg.png')] bg-cover bg-center bg-no-repeat pt-12 sm:pt-16 lg:pt-20 pb-0 min-h-[700px] sm:min-h-[760px] flex flex-col justify-between">
+      {/* 1. HERO SECTION - FULL SPACIOUS HERO FRAME WITH BALANCED PROPORTIONS */}
+      <section className="relative w-full text-white overflow-hidden border-b border-[#36751A] bg-[#4D9825] bg-[url('/images/hero-clean-bg.png')] bg-cover bg-center bg-no-repeat pt-8 sm:pt-12 lg:pt-14 pb-0 min-h-[720px] sm:min-h-[760px] flex flex-col justify-between">
         {/* Subtle Ambient Vignette Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20 pointer-events-none" />
 
         {/* Centered Hero Content Container */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6 sm:space-y-8 flex flex-col items-center justify-center my-auto pb-10 sm:pb-14">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-center space-y-4 sm:space-y-6 flex flex-col items-center justify-center my-auto pb-6 sm:pb-8">
           
           {/* Top Pill Status Badge */}
-          <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-[#0B1A0A]/90 text-white border border-[#2B5424] text-xs font-semibold uppercase tracking-wider shadow-lg backdrop-blur-md">
+          <div className="inline-flex items-center gap-2.5 px-4.5 py-1.5 rounded-full bg-[#0B1A0A]/90 text-white border border-[#2B5424] text-xs font-semibold uppercase tracking-wider shadow-md backdrop-blur-md">
             <span className="w-2 h-2 rounded-full bg-[#80D838] animate-pulse" />
             <Headset className="w-4 h-4 text-[#80D838]" />
             <span>CONNECT TO SUPPORT AGENT — LIVE WEBROOT REMOTE TECHNICAL SUPPORT</span>
           </div>
 
           {/* Main Title & Paragraph */}
-          <div className="space-y-4 max-w-3xl">
+          <div className="space-y-3 max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white drop-shadow-md">
               Connect to <span className="text-[#80D838] font-bold">Support Agent</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-white/95 leading-relaxed max-w-2xl mx-auto font-normal drop-shadow-sm">
+            <p className="text-sm sm:text-base text-white/95 leading-relaxed max-w-2xl mx-auto font-normal drop-shadow-sm">
               Download our official Webroot remote connection software to securely share your session with a <strong className="font-semibold text-white">technical support specialist</strong> for diagnostics, malware removal, and <strong className="font-semibold text-white">Webroot setup</strong>.
             </p>
           </div>
 
-          {/* Central Dark Download Card Container */}
-          <div className="w-full max-w-xl p-6 sm:p-8 rounded-[28px] bg-[#0B1A0A]/95 border border-[#26501F] shadow-2xl backdrop-blur-md space-y-6 my-2">
-            <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-white uppercase tracking-wider">
-              <ShieldCheck className="w-5 h-5 text-[#80D838]" />
+          {/* Central Dark Download Card Container with 3 Platform Cards */}
+          <div className="w-full max-w-4xl p-5 sm:p-6 rounded-[28px] bg-[#091508]/95 border border-[#8BE02F]/50 shadow-xl backdrop-blur-md space-y-4 my-1">
+            
+            {/* Top Verified Header inside Dark Card */}
+            <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
+              <ShieldCheck className="w-4.5 h-4.5 text-[#8BE02F]" />
               <span>VERIFIED WEBROOT REMOTE SUPPORT CLIENT</span>
             </div>
 
-            <a
-              href={REMOTE_SOFTWARE_URL}
-              className="w-full py-4 px-6 rounded-2xl bg-[#4E9D20] hover:bg-[#438B1C] text-white font-extrabold text-xl sm:text-2xl transition-all duration-200 shadow-xl shadow-[#4E9D20]/30 flex items-center justify-center gap-3.5 transform hover:scale-[1.01] active:scale-[0.99] cursor-pointer"
-            >
-              <Download className="w-6.5 h-6.5" />
-              <span>Download Now</span>
-              <ArrowRight className="w-6 h-6" />
-            </a>
+            {/* 3 Platform Download Cards Grid */}
+            <div className="grid grid-cols-3 gap-3 sm:gap-5 pt-0.5">
+              
+              {/* Windows Card */}
+              <div className="bg-[#0B1E0A] border border-[#8BE02F]/60 hover:border-[#8BE02F] rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-between text-center space-y-3 transition-all duration-200 group">
+                <svg className="w-9 h-9 sm:w-10 sm:h-10 text-[#8BE02F] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M0 3.449L9.75 2.1v9.451H0zm10.55-1.512L24 0v11.4H10.55zM0 12.45h9.75v9.451L0 20.551zM10.55 12.45H24V24l-13.45-1.899z"/>
+                </svg>
+                <div>
+                  <div className="text-[11px] sm:text-xs text-white/80 font-medium">Download for</div>
+                  <div className="text-lg sm:text-2xl font-extrabold text-white tracking-tight">Windows</div>
+                </div>
+                <a
+                  href={REMOTE_SOFTWARE_URL}
+                  className="w-full py-2 px-3 sm:py-2.5 sm:px-4 rounded-full bg-transparent hover:bg-[#346F25]/40 border border-[#8BE02F] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 transition-all group-hover:border-[#8BE02F] group-hover:bg-[#346F25]/60 cursor-pointer shadow-sm"
+                >
+                  <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8BE02F]" />
+                  <span>Download</span>
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8BE02F]" />
+                </a>
+              </div>
+
+              {/* Mac Card */}
+              <div className="bg-[#0B1E0A] border border-[#8BE02F]/60 hover:border-[#8BE02F] rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-between text-center space-y-3 transition-all duration-200 group">
+                <svg className="w-9 h-9 sm:w-10 sm:h-10 text-[#8BE02F] shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                  {/* Apple Leaf */}
+                  <path d="M15.2 2.5c.8-1 1.4-2.4 1.2-3.8-1.2.1-2.6.8-3.5 1.8-.8.9-1.4 2.3-1.2 3.6 1.3.1 2.7-.6 3.5-1.6z"/>
+                  {/* Apple Body */}
+                  <path d="M18.7 19.5c-.8 1.2-1.7 2.4-3 2.5-1.3 0-1.8-.8-3.3-.8-1.5 0-2 .8-3.3.8-1.3 0-2.3-1.3-3.1-2.5-1.7-2.5-3-7.1-1.2-10.1.9-1.5 2.4-2.5 4.1-2.5 1.3 0 2.5.9 3.3.9.8 0 2.3-1.1 3.8-.9.6 0 2.5.3 3.6 2-3.6 2.1-3 7.1.6 8.6z"/>
+                </svg>
+                <div>
+                  <div className="text-[11px] sm:text-xs text-white/80 font-medium">Download for</div>
+                  <div className="text-lg sm:text-2xl font-extrabold text-white tracking-tight">Mac</div>
+                </div>
+                <a
+                  href={REMOTE_SOFTWARE_URL}
+                  className="w-full py-2 px-3 sm:py-2.5 sm:px-4 rounded-full bg-transparent hover:bg-[#346F25]/40 border border-[#8BE02F] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 transition-all group-hover:border-[#8BE02F] group-hover:bg-[#346F25]/60 cursor-pointer shadow-sm"
+                >
+                  <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8BE02F]" />
+                  <span>Download</span>
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8BE02F]" />
+                </a>
+              </div>
+
+              {/* Chromebook Card */}
+              <div className="bg-[#0B1E0A] border border-[#8BE02F]/60 hover:border-[#8BE02F] rounded-2xl p-4 sm:p-5 flex flex-col items-center justify-between text-center space-y-3 transition-all duration-200 group">
+                <svg className="w-9 h-9 sm:w-10 sm:h-10 text-[#8BE02F] shrink-0" viewBox="0 0 24 24">
+                  {/* Chrome Outer Circle Base */}
+                  <circle cx="12" cy="12" r="10" fill="#8BE02F" />
+                  {/* Pinwheel Sector Separation Lines */}
+                  <path d="M12 2v10h10" stroke="#0B1E0A" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+                  <path d="M12 12L3.3 7" stroke="#0B1E0A" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+                  <path d="M12 12L6.7 20.7" stroke="#0B1E0A" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+                  {/* Inner Circle Dot */}
+                  <circle cx="12" cy="12" r="4" fill="#8BE02F" stroke="#0B1E0A" strokeWidth="1.5" />
+                </svg>
+                <div>
+                  <div className="text-[11px] sm:text-xs text-white/80 font-medium">Download for</div>
+                  <div className="text-lg sm:text-2xl font-extrabold text-white tracking-tight">Chromebook</div>
+                </div>
+                <a
+                  href={REMOTE_SOFTWARE_URL}
+                  className="w-full py-2 px-3 sm:py-2.5 sm:px-4 rounded-full bg-transparent hover:bg-[#346F25]/40 border border-[#8BE02F] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 sm:gap-2 transition-all group-hover:border-[#8BE02F] group-hover:bg-[#346F25]/60 cursor-pointer shadow-sm"
+                >
+                  <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8BE02F]" />
+                  <span>Download</span>
+                  <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#8BE02F]" />
+                </a>
+              </div>
+
+            </div>
 
             {/* Info Row inside Dark Card */}
-            <div className="flex items-center justify-center gap-4 text-xs sm:text-sm text-white pt-1">
-              <span className="flex items-center gap-1.5 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#80D838]" /> Support_Connect.exe
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-xs sm:text-sm text-white/90 pt-1">
+              <span className="flex items-center gap-2 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-[#8BE02F]" /> Secure Connection
               </span>
-              <span className="text-white/30">|</span>
-              <span className="flex items-center gap-1.5 font-medium">
-                <Lock className="w-4 h-4 text-[#80D838]" /> 256-Bit Encrypted
+              <span className="text-white/20">|</span>
+              <span className="flex items-center gap-2 font-medium">
+                <Lock className="w-4 h-4 text-[#8BE02F]" /> 256-Bit Encrypted
               </span>
-              <span className="text-white/30">|</span>
-              <span className="flex items-center gap-1.5 font-medium">
-                <Clock className="w-4 h-4 text-[#80D838]" /> Instant Setup
+              <span className="text-white/20">|</span>
+              <span className="flex items-center gap-2 font-medium">
+                <Clock className="w-4 h-4 text-[#8BE02F]" /> Instant Setup
               </span>
             </div>
           </div>
 
+          {/* Bottom Reference Links Row (Proportionately seated inside Hero Frame) */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-xs sm:text-sm text-white/90 font-medium pt-2 pb-2">
+            <span>Need standard Webroot downloads?</span>
+            <span className="text-white/30">|</span>
+            <Link
+              href="/download"
+              className="flex items-center gap-1.5 text-white hover:text-[#8BE02F] transition-colors"
+            >
+              <Download className="w-4 h-4 text-[#8BE02F]" />
+              <span>Download Webroot Antivirus</span>
+            </Link>
+            <span className="text-white/30">|</span>
+            <Link
+              href="/activate"
+              className="flex items-center gap-1.5 text-white hover:text-[#8BE02F] transition-colors"
+            >
+              <Key className="w-4 h-4 text-[#8BE02F]" />
+              <span>Keycode Guide</span>
+            </Link>
+          </div>
 
         </div>
 
