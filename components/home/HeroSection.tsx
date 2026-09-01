@@ -18,7 +18,11 @@ export default function HeroSection({ remoteSoftwareUrl, marqueeItems }: HeroSec
   };
 
   return (
-    <section className="relative w-full text-white overflow-hidden border-b border-[#1c4d28] bg-[#020e06] flex flex-col justify-between pt-4 sm:pt-6 lg:pt-8 pb-0 min-h-[680px] sm:min-h-[740px]">
+    <section className={`relative w-full text-white overflow-hidden border-b border-[#1c4d28] bg-[#020e06] flex flex-col justify-between transition-all duration-300 ${
+      showPlatformCards 
+        ? 'pt-10 sm:pt-12 lg:pt-14 pb-0 min-h-[860px] sm:min-h-[920px] lg:min-h-[960px]' 
+        : 'pt-12 sm:pt-16 lg:pt-20 pb-0 min-h-[720px] sm:min-h-[780px]'
+    }`}>
       {/* Ambient Radial Tech Glow */}
       <div 
         className="absolute inset-0 pointer-events-none" 
@@ -70,7 +74,9 @@ export default function HeroSection({ remoteSoftwareUrl, marqueeItems }: HeroSec
       </svg>
 
       {/* Centered Hero Content Container */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center justify-start space-y-4 sm:space-y-5 pt-1 sm:pt-3 pb-6 sm:pb-8">
+      <div className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center justify-start transition-all duration-300 ${
+        showPlatformCards ? 'space-y-3 sm:space-y-4 pt-2 sm:pt-4 pb-8 sm:pb-12' : 'space-y-5 sm:space-y-6 pt-4 sm:pt-8 pb-10 sm:pb-14'
+      }`}>
         
         {/* Top Pill Status Badge */}
         <div className="inline-flex items-center gap-2.5 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-[#051c0e]/90 text-white border border-[#1e522b] text-[11px] sm:text-xs font-semibold uppercase tracking-wider shadow-lg backdrop-blur-md">
@@ -94,7 +100,7 @@ export default function HeroSection({ remoteSoftwareUrl, marqueeItems }: HeroSec
 
         {/* Central Container Box matching clipboard-image(2).png */}
         <div className={`w-full transition-all duration-300 rounded-[20px] sm:rounded-[26px] bg-[#051c0d]/95 border border-[#1e522b] shadow-[0_0_60px_rgba(20,75,36,0.35)] backdrop-blur-md space-y-4 sm:space-y-5 my-1 ${
-          showPlatformCards ? 'max-w-4xl p-4 sm:p-6' : 'max-w-xl p-5 sm:p-8 space-y-6'
+          showPlatformCards ? 'max-w-4xl p-4 sm:p-5' : 'max-w-xl p-5 sm:p-8 space-y-6'
         }`}>
           <div className="flex items-center justify-center gap-2 text-xs sm:text-sm font-bold text-white uppercase tracking-wider">
             <ShieldCheck className="w-5 h-5 text-[#65C400]" />
