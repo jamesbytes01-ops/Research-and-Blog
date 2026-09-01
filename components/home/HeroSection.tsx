@@ -18,64 +18,56 @@ export default function HeroSection({ remoteSoftwareUrl, marqueeItems }: HeroSec
   };
 
   return (
-    <section className={`relative w-full text-white overflow-hidden border-b border-[#1c4d28] bg-[#020e06] flex flex-col justify-between transition-all duration-300 ${
+    <section className={`relative w-full text-white overflow-hidden border-b border-[#1c4d28] bg-[#04170c] flex flex-col justify-between transition-all duration-300 ${
       showPlatformCards 
-        ? 'pt-10 sm:pt-12 lg:pt-14 pb-0 min-h-[860px] sm:min-h-[920px] lg:min-h-[960px]' 
-        : 'pt-12 sm:pt-16 lg:pt-20 pb-0 min-h-[720px] sm:min-h-[780px]'
+        ? 'pt-6 sm:pt-8 lg:pt-10 pb-0 min-h-[600px] sm:min-h-[660px]' 
+        : 'pt-8 sm:pt-12 lg:pt-14 pb-0 min-h-[540px] sm:min-h-[600px]'
     }`}>
-      {/* Ambient Radial Tech Glow */}
-      <div 
-        className="absolute inset-0 pointer-events-none" 
-        style={{
-          background: 'radial-gradient(circle at 50% 45%, rgba(18, 68, 32, 0.5) 0%, rgba(2, 14, 6, 0.98) 78%)'
-        }} 
-      />
+      {/* Left Side Vector Circuit Traces Overlay */}
+      <svg className="absolute left-0 top-0 bottom-0 w-[240px] sm:w-[380px] lg:w-[460px] h-full pointer-events-none opacity-80 z-0" viewBox="0 0 460 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 130 H120 L160 90 H280" stroke="#1c572b" strokeWidth="1.5" />
+        <circle cx="280" cy="90" r="4" fill="#65C400" />
 
-      {/* Left Side Circuit Traces Vector Overlay */}
-      <svg className="absolute left-0 top-0 bottom-0 w-[300px] sm:w-[500px] h-full pointer-events-none opacity-70 z-0" viewBox="0 0 500 650" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 160 H140 L180 120 H300" stroke="#1c572b" strokeWidth="1.5" />
-        <circle cx="300" cy="120" r="4" fill="#65C400" className="animate-pulse" />
+        <path d="M0 210 H180 L220 240 H360" stroke="#1c572b" strokeWidth="1.5" />
+        <circle cx="360" cy="240" r="4" fill="#65C400" />
 
-        <path d="M0 240 H200 L240 270 H380" stroke="#1c572b" strokeWidth="1.5" />
-        <circle cx="380" cy="270" r="4" fill="#65C400" />
+        <path d="M0 280 H130 L160 250 H240" stroke="#1c572b" strokeWidth="1.5" />
+        <circle cx="240" cy="250" r="4" fill="#65C400" />
 
-        <path d="M0 320 H150 L180 290 H260" stroke="#1c572b" strokeWidth="1.5" />
-        <circle cx="260" cy="290" r="4" fill="#65C400" />
+        <path d="M0 350 H190 L230 380 H370" stroke="#1c572b" strokeWidth="1.5" />
+        <circle cx="370" cy="380" r="4" fill="#65C400" />
 
-        <path d="M0 400 H220 L260 430 H410" stroke="#1c572b" strokeWidth="1.5" />
-        <circle cx="410" cy="430" r="4" fill="#65C400" className="animate-pulse" />
-
-        <path d="M0 490 H110 L140 460 H220" stroke="#1c572b" strokeWidth="1.5" />
-        <circle cx="220" cy="460" r="4" fill="#65C400" />
+        <path d="M0 430 H100 L130 400 H200" stroke="#1c572b" strokeWidth="1.5" />
+        <circle cx="200" cy="400" r="4" fill="#65C400" />
       </svg>
 
-      {/* Right Side Concentric Radar & Tech Arcs Vector Overlay */}
-      <svg className="absolute right-0 top-0 bottom-0 w-[300px] sm:w-[500px] h-full pointer-events-none opacity-70 z-0" viewBox="0 0 500 650" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* Right Side Concentric Radar & Tech Arcs Overlay */}
+      <svg className="absolute right-0 top-0 bottom-0 w-[240px] sm:w-[380px] lg:w-[460px] h-full pointer-events-none opacity-80 z-0" viewBox="0 0 460 550" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Concentric Tech Circles */}
-        <circle cx="440" cy="320" r="190" stroke="#14421e" strokeWidth="1" strokeDasharray="5 5" />
-        <circle cx="440" cy="320" r="145" stroke="#1c572b" strokeWidth="1.5" />
-        <circle cx="440" cy="320" r="100" stroke="#226b35" strokeWidth="2" />
-        <circle cx="440" cy="320" r="55" stroke="#1c572b" strokeWidth="1.5" />
+        <circle cx="410" cy="275" r="170" stroke="#14421e" strokeWidth="1" strokeDasharray="5 5" />
+        <circle cx="410" cy="275" r="130" stroke="#1c572b" strokeWidth="1.5" />
+        <circle cx="410" cy="275" r="90" stroke="#226b35" strokeWidth="2" />
+        <circle cx="410" cy="275" r="50" stroke="#1c572b" strokeWidth="1.5" />
 
-        {/* Nodes along perimeter */}
-        <circle cx="295" cy="320" r="4" fill="#65C400" />
-        <circle cx="335" cy="215" r="4" fill="#65C400" />
-        <circle cx="335" cy="425" r="4" fill="#65C400" />
+        {/* Perimeter Nodes */}
+        <circle cx="280" cy="275" r="4" fill="#65C400" />
+        <circle cx="318" cy="183" r="4" fill="#65C400" />
+        <circle cx="318" cy="367" r="4" fill="#65C400" />
 
-        {/* Branching Lines from Radar */}
-        <path d="M295 320 H190 L150 280 H90" stroke="#1c572b" strokeWidth="1.5" />
-        <circle cx="90" cy="280" r="4" fill="#65C400" className="animate-pulse" />
+        {/* Branching Circuit Lines */}
+        <path d="M280 275 H180 L140 235 H80" stroke="#1c572b" strokeWidth="1.5" />
+        <circle cx="80" cy="235" r="4" fill="#65C400" />
 
-        <path d="M335 425 L275 485 H170" stroke="#1c572b" strokeWidth="1.5" />
-        <circle cx="170" cy="485" r="4" fill="#65C400" />
+        <path d="M318 367 L265 420 H160" stroke="#1c572b" strokeWidth="1.5" />
+        <circle cx="160" cy="420" r="4" fill="#65C400" />
 
-        <path d="M335 215 L275 155 H130" stroke="#1c572b" strokeWidth="1.5" />
-        <circle cx="130" cy="155" r="4" fill="#65C400" />
+        <path d="M318 183 L265 130 H130" stroke="#1c572b" strokeWidth="1.5" />
+        <circle cx="130" cy="130" r="4" fill="#65C400" />
       </svg>
 
       {/* Centered Hero Content Container */}
       <div className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center justify-start transition-all duration-300 ${
-        showPlatformCards ? 'space-y-3 sm:space-y-4 pt-2 sm:pt-4 pb-8 sm:pb-12' : 'space-y-5 sm:space-y-6 pt-4 sm:pt-8 pb-10 sm:pb-14'
+        showPlatformCards ? 'space-y-3 sm:space-y-4 pt-2 sm:pt-3 pb-6 sm:pb-8' : 'space-y-4 sm:space-y-5 pt-3 sm:pt-6 pb-8 sm:pb-10'
       }`}>
         
         {/* Top Pill Status Badge */}
