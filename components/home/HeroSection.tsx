@@ -18,36 +18,44 @@ export default function HeroSection({ remoteSoftwareUrl, marqueeItems }: HeroSec
   };
 
   return (
-    <section className={`relative w-full text-white overflow-hidden border-b border-[#1c4d28] bg-[#04170c] flex flex-col justify-between transition-all duration-300 ${
+    <section className={`relative w-full text-white overflow-hidden border-b border-[#1c5c2d] bg-[#062612] flex flex-col justify-between transition-all duration-300 ${
       showPlatformCards 
-        ? 'pt-6 sm:pt-8 lg:pt-10 pb-0 min-h-[600px] sm:min-h-[660px]' 
-        : 'pt-8 sm:pt-12 lg:pt-14 pb-0 min-h-[540px] sm:min-h-[600px]'
+        ? 'pt-8 sm:pt-10 lg:pt-12 pb-0 min-h-[760px] sm:min-h-[820px]' 
+        : 'pt-12 sm:pt-16 lg:pt-18 pb-0 min-h-[660px] sm:min-h-[720px]'
     }`}>
+      {/* Rich Vibrant Green Radial Glow - Zero Blackness */}
+      <div 
+        className="absolute inset-0 pointer-events-none z-0" 
+        style={{
+          background: 'radial-gradient(circle at 50% 45%, #0b4a22 0%, #05210f 100%)'
+        }} 
+      />
+
       {/* Left Side Vector Circuit Traces Overlay */}
-      <svg className="absolute left-0 top-0 bottom-0 w-[240px] sm:w-[380px] lg:w-[460px] h-full pointer-events-none opacity-80 z-0" viewBox="0 0 460 550" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 130 H120 L160 90 H280" stroke="#1c572b" strokeWidth="1.5" />
+      <svg className="absolute left-0 top-0 bottom-0 w-[240px] sm:w-[380px] lg:w-[460px] h-full pointer-events-none opacity-85 z-0" viewBox="0 0 460 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 130 H120 L160 90 H280" stroke="#217837" strokeWidth="1.5" />
         <circle cx="280" cy="90" r="4" fill="#65C400" />
 
-        <path d="M0 210 H180 L220 240 H360" stroke="#1c572b" strokeWidth="1.5" />
+        <path d="M0 210 H180 L220 240 H360" stroke="#217837" strokeWidth="1.5" />
         <circle cx="360" cy="240" r="4" fill="#65C400" />
 
-        <path d="M0 280 H130 L160 250 H240" stroke="#1c572b" strokeWidth="1.5" />
+        <path d="M0 280 H130 L160 250 H240" stroke="#217837" strokeWidth="1.5" />
         <circle cx="240" cy="250" r="4" fill="#65C400" />
 
-        <path d="M0 350 H190 L230 380 H370" stroke="#1c572b" strokeWidth="1.5" />
+        <path d="M0 350 H190 L230 380 H370" stroke="#217837" strokeWidth="1.5" />
         <circle cx="370" cy="380" r="4" fill="#65C400" />
 
-        <path d="M0 430 H100 L130 400 H200" stroke="#1c572b" strokeWidth="1.5" />
+        <path d="M0 430 H100 L130 400 H200" stroke="#217837" strokeWidth="1.5" />
         <circle cx="200" cy="400" r="4" fill="#65C400" />
       </svg>
 
       {/* Right Side Concentric Radar & Tech Arcs Overlay */}
-      <svg className="absolute right-0 top-0 bottom-0 w-[240px] sm:w-[380px] lg:w-[460px] h-full pointer-events-none opacity-80 z-0" viewBox="0 0 460 550" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute right-0 top-0 bottom-0 w-[240px] sm:w-[380px] lg:w-[460px] h-full pointer-events-none opacity-85 z-0" viewBox="0 0 460 550" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* Concentric Tech Circles */}
-        <circle cx="410" cy="275" r="170" stroke="#14421e" strokeWidth="1" strokeDasharray="5 5" />
-        <circle cx="410" cy="275" r="130" stroke="#1c572b" strokeWidth="1.5" />
-        <circle cx="410" cy="275" r="90" stroke="#226b35" strokeWidth="2" />
-        <circle cx="410" cy="275" r="50" stroke="#1c572b" strokeWidth="1.5" />
+        <circle cx="410" cy="275" r="170" stroke="#1b5c2a" strokeWidth="1" strokeDasharray="5 5" />
+        <circle cx="410" cy="275" r="130" stroke="#217837" strokeWidth="1.5" />
+        <circle cx="410" cy="275" r="90" stroke="#2c9446" strokeWidth="2" />
+        <circle cx="410" cy="275" r="50" stroke="#217837" strokeWidth="1.5" />
 
         {/* Perimeter Nodes */}
         <circle cx="280" cy="275" r="4" fill="#65C400" />
@@ -55,19 +63,19 @@ export default function HeroSection({ remoteSoftwareUrl, marqueeItems }: HeroSec
         <circle cx="318" cy="367" r="4" fill="#65C400" />
 
         {/* Branching Circuit Lines */}
-        <path d="M280 275 H180 L140 235 H80" stroke="#1c572b" strokeWidth="1.5" />
+        <path d="M280 275 H180 L140 235 H80" stroke="#217837" strokeWidth="1.5" />
         <circle cx="80" cy="235" r="4" fill="#65C400" />
 
-        <path d="M318 367 L265 420 H160" stroke="#1c572b" strokeWidth="1.5" />
+        <path d="M318 367 L265 420 H160" stroke="#217837" strokeWidth="1.5" />
         <circle cx="160" cy="420" r="4" fill="#65C400" />
 
-        <path d="M318 183 L265 130 H130" stroke="#1c572b" strokeWidth="1.5" />
+        <path d="M318 183 L265 130 H130" stroke="#217837" strokeWidth="1.5" />
         <circle cx="130" cy="130" r="4" fill="#65C400" />
       </svg>
 
       {/* Centered Hero Content Container */}
       <div className={`max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center justify-start transition-all duration-300 ${
-        showPlatformCards ? 'space-y-3 sm:space-y-4 pt-2 sm:pt-3 pb-6 sm:pb-8' : 'space-y-4 sm:space-y-5 pt-3 sm:pt-6 pb-8 sm:pb-10'
+        showPlatformCards ? 'space-y-3 sm:space-y-4 pt-2 sm:pt-4 pb-8 sm:pb-12' : 'space-y-4 sm:space-y-5 pt-6 sm:pt-10 pb-10 sm:pb-14'
       }`}>
         
         {/* Top Pill Status Badge */}
