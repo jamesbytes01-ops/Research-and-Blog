@@ -10,11 +10,14 @@ interface PlatformLogoProps {
 export default function PlatformLogo({ platform, className = 'w-7 h-7' }: PlatformLogoProps) {
   const norm = platform.toLowerCase();
 
-  // Windows PC (Official Microsoft 4-Pane Blue Logo)
+  // Windows PC (Official Microsoft 4-Pane Color Logo)
   if (norm.includes('win')) {
     return (
       <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 3.449L9.75 2.1V11.59H0V3.449ZM9.75 12.87V22.4L0 21.05V12.87H9.75ZM11.21 1.9L24 0V11.59H11.21V1.9ZM24 12.87V24L11.21 22.25V12.87H24Z" fill="#0078D4"/>
+        <rect x="2" y="2" width="9.5" height="9.5" rx="0.5" fill="#F25022" />
+        <rect x="12.5" y="2" width="9.5" height="9.5" rx="0.5" fill="#7FBA00" />
+        <rect x="2" y="12.5" width="9.5" height="9.5" rx="0.5" fill="#00A4EF" />
+        <rect x="12.5" y="12.5" width="9.5" height="9.5" rx="0.5" fill="#FFB900" />
       </svg>
     );
   }
@@ -22,7 +25,7 @@ export default function PlatformLogo({ platform, className = 'w-7 h-7' }: Platfo
   // Mac / macOS (Official Apple Inc Silhouette)
   if (norm.includes('mac') || norm === 'apple') {
     return (
-      <svg className={`${className} text-slate-900 dark:text-white`} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`${className} text-white`} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97.02c.04.53-.08 1.07-.35 1.57-.27.5-.66.91-1.15 1.18-.84.45-1.78.68-2.73.68-.04-.54.08-1.08.35-1.58.27-.5.66-.91 1.15-1.18C14.08.26 15.02.03 15.97.02z"/>
       </svg>
     );
@@ -40,23 +43,35 @@ export default function PlatformLogo({ platform, className = 'w-7 h-7' }: Platfo
   // iOS / iPhone (Official Apple Logo)
   if (norm.includes('ios') || norm.includes('iphone') || norm.includes('ipad')) {
     return (
-      <svg className={`${className} text-slate-900 dark:text-white`} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <svg className={`${className} text-white`} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97.02c.04.53-.08 1.07-.35 1.57-.27.5-.66.91-1.15 1.18-.84.45-1.78.68-2.73.68-.04-.54.08-1.08.35-1.58.27-.5.66-.91 1.15-1.18C14.08.26 15.02.03 15.97.02z"/>
       </svg>
     );
   }
 
-  // Chromebook (Official Google Chrome 4-Color Emblem)
+  // Chromebook (Official Google Chrome 4-Color Emblem - Perfectly Balanced Sectors)
   if (norm.includes('chrome')) {
     return (
       <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="12" cy="12" r="9" fill="#FFFFFF"/>
-        <path d="M12 3C8.13 3 5 5.47 3.9 8.9L8.4 16.7L12 12H21C21 7.03 16.97 3 12 3Z" fill="#EA4335"/>
-        <path d="M12 21C15.87 21 19 18.53 20.1 15.1L15.6 7.3L12 12H3C3 16.97 7.03 21 12 21Z" fill="#34A853"/>
-        <path d="M3.9 8.9C3.32 10.1 3 11.45 3 12.87C3 17.84 7.03 21.87 12 21.87L15.6 15.67L8.4 15.67L3.9 8.9Z" fill="#FBBC05"/>
-        <path d="M12 3C15.87 3 19 5.47 20.1 8.9L15.6 16.7L12 12V3Z" fill="#EA4335" opacity="0"/>
-        <circle cx="12" cy="12" r="4.2" fill="#4285F4"/>
-        <circle cx="12" cy="12" r="5" stroke="#FFFFFF" strokeWidth="1.2"/>
+        <circle cx="12" cy="12" r="9.6" fill="#FFFFFF"/>
+        <g clipPath="url(#chrome-logo-clip)">
+          {/* Top Red Slice (120 Degree Arc) */}
+          <path d="M12 2.4C7.2 2.4 3.2 5.8 2.3 10.4L12 12L21.7 10.4C20.8 5.8 16.8 2.4 12 2.4Z" fill="#EA4335"/>
+          {/* Bottom-Left Green Slice (120 Degree Arc) */}
+          <path d="M2.3 10.4C1.4 12.5 1.2 14.8 1.8 17.1C2.5 19.8 4.5 21.9 7.2 22.7L12 12L2.3 10.4Z" fill="#34A853"/>
+          <path d="M2.3 10.4L12 12V21.6C6.7 21.6 2.4 17.3 2.3 10.4Z" fill="#34A853"/>
+          {/* Bottom-Right Yellow Slice (120 Degree Arc - Strictly Confined to x>=12, y>=7.2) */}
+          <path d="M12 21.6C17.3 21.6 21.6 17.3 21.7 12C21.7 11.4 21.6 10.9 21.5 10.4L12 12V21.6Z" fill="#FBBC05"/>
+        </g>
+        <defs>
+          <clipPath id="chrome-logo-clip">
+            <circle cx="12" cy="12" r="9.6" />
+          </clipPath>
+        </defs>
+        {/* White Inner Ring */}
+        <circle cx="12" cy="12" r="4.2" fill="#FFFFFF"/>
+        {/* Blue Core Center */}
+        <circle cx="12" cy="12" r="3.2" fill="#4285F4"/>
       </svg>
     );
   }
