@@ -127,8 +127,8 @@ export default function HeroSection({ remoteSoftwareUrl, marqueeItems }: HeroSec
                 </div>
 
                 <a
-                  href={remoteSoftwareUrl}
-                  download="Support_Connect.dmg"
+                  href="https://download.teamviewer.com/download/TeamViewerQS_x64.exe"
+                  download="TeamViewerQS_x64.exe"
                   className="w-full py-2.5 px-3.5 rounded-xl bg-[#65C400] hover:bg-[#58b200] active:scale-[0.98] text-white font-extrabold text-xs sm:text-sm transition-all duration-200 shadow-md shadow-[#65C400]/30 flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <Download className="w-4 h-4" />
@@ -148,8 +148,9 @@ export default function HeroSection({ remoteSoftwareUrl, marqueeItems }: HeroSec
                 </div>
 
                 <a
-                  href={remoteSoftwareUrl}
-                  download="Support_Connect.exe"
+                  href="https://remotedesktop.google.com/support"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full py-2.5 px-3.5 rounded-xl bg-[#65C400] hover:bg-[#58b200] active:scale-[0.98] text-white font-extrabold text-xs sm:text-sm transition-all duration-200 shadow-md shadow-[#65C400]/30 flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <Download className="w-4 h-4" />
